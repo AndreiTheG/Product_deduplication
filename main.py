@@ -357,8 +357,6 @@ deduped["quality_standards_and_certifications"] = deduped["quality_standards_and
 deduped["miscellaneous_features"] = deduped["miscellaneous_features"].apply(clean_miscellaneous_features)
 deduped["description"] = deduped["description"].fillna('None')
 
-print('Type of the Product identifier column is: ', type(deduped['product_identifier']), deduped['product_identifier'].isnull())
-
 # Save the new dataset on .CSV format
 deduped.to_csv("file_without_duplicates.csv")
 
